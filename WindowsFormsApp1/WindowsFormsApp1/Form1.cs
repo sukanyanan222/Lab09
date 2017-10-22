@@ -20,7 +20,16 @@ namespace WindowsFormsApp1
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            
+            Graphics g = e.Graphics;
+            Point[] pt = { new Point(10,22),
+                          new Point(188,246),
+                          new Point(250,192),
+                          new Point(220,48),
+            };
+            g.FillClosedCurve(Brushes.Blue, pt);
+            g.DrawClosedCurve(Pens.Red, pt);
+            g.Dispose();
+
 
         }
     }
