@@ -20,7 +20,17 @@ namespace WindowsFormsApp1
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            
+            Graphics g = e.Graphics;
+            Pen penEllipse = new Pen(Color.Brown);
+            penEllipse.DashStyle = DashStyle.Dash;
+            g.DrawEllipse(penEllipse, 20, 20, 200, 150);
+            Pen penPie = new Pen(Color.Magenta, 2);
+            g.DrawPie(penPie, 20, 20, 200, 150, 45, 90);
+            Pen penPie1 = new Pen(Color.BlueViolet, 2);
+            g.DrawPie(penPie, 20, 20, 200, 150, 150, 45);
+            g.Dispose();
+
+
 
         }
     }
