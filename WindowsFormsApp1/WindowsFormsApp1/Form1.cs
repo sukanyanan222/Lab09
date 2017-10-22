@@ -21,11 +21,11 @@ namespace WindowsFormsApp1
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            Image image = Image.FromFile("d:\\59030222_1.Png");
-            TextureBrush brush = new TextureBrush(image);
-            Rectangle rect = new Rectangle(10, 10, 180, 150);
-            g.FillEllipse(brush, rect);
+            Bitmap bmp = new Bitmap("D:\\nann.Png");
+            this.SetClientSizeCore(bmp.Width + 20, bmp.Height + 20);
+            g.DrawImage(bmp, 10, 10);
             g.Dispose();
+
 
 
 
