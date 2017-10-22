@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            
+        
 
         }
     }
