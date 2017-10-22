@@ -20,7 +20,21 @@ namespace WindowsFormsApp1
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            
+            Graphics g = e.Graphics;
+            System.Drawing.Drawing2D.GraphicsPath gpath = new System.Drawing.Drawing2D.GraphicsPath();
+            gpath.AddEllipse(46, 4, 28, 28);
+            gpath.AddLine(36, 32, 84, 32);
+            gpath.AddLine(100, 80, 88, 84);
+            gpath.AddLine(76, 50, 74, 84);
+            gpath.AddLine(90, 150, 74, 150);
+            gpath.AddLine(60, 100, 46, 150);
+            gpath.AddLine(32, 150, 46, 84);
+            gpath.AddLine(44, 50, 32, 84);
+            gpath.AddLine(20, 80, 36, 32);
+            g.FillPath(Brushes.Blue, gpath);
+            g.Dispose();
+
+
 
         }
     }
