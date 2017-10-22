@@ -20,7 +20,11 @@ namespace WindowsFormsApp1
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            
+            Graphics g = e.Graphics;
+            Pen bluepen = new Pen(Color.Blue, 2);
+            g.DrawRectangle(bluepen, 10, 10, 100, 100);
+            bluepen.Dispose();
+
 
         }
     }
