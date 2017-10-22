@@ -20,7 +20,14 @@ namespace WindowsFormsApp1
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            
+            Graphics g = e.Graphics;
+            Pen pen = new Pen(Color.Green, 2);
+            pen.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            e.Graphics.DrawLine(pen, 10, 80, 220, 80);
+            pen = new Pen(Brushes.DeepSkyBlue, 4);
+            e.Graphics.DrawLine(pen, 10, 120, 220, 120);
+            pen.Dispose();
+
 
         }
     }
