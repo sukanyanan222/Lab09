@@ -20,7 +20,15 @@ namespace WindowsFormsApp1
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-        
+            Graphics g = e.Graphics;
+            Bitmap bmp = new Bitmap("D:\\nann.Png");
+            Rectangle destrect = new Rectangle(10, 10, bmp.Width / 2, bmp.Height);
+            Rectangle srcrect = new Rectangle(0, 0, bmp.Width, bmp.Height);
+            this.SetClientSizeCore(destrect.Width + 20, destrect.Height + 20);
+            g.DrawImage(bmp, destrect, srcrect, GraphicsUnit.Pixel);
+            g.Dispose();
+
+
 
         }
     }
